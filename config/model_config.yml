@@ -1,0 +1,44 @@
+# Model Configuration for Time Series Forecasting
+
+# Data Split
+train_test_split:
+  train_end: '2024-12-31'
+  test_start: '2025-01-01'
+
+# ARIMA/SARIMA Parameters
+arima:
+  max_p: 5
+  max_d: 2
+  max_q: 5
+  seasonal: false
+  m: 12  # seasonal period
+  stepwise: true
+  trace: true
+  error_action: 'ignore'
+  suppress_warnings: true
+
+sarima:
+  seasonal: true
+  m: 12
+  D: 1
+  max_P: 2
+  max_D: 1
+  max_Q: 2
+
+# LSTM Parameters
+lstm:
+  sequence_length: 60
+  train_test_split: 0.8
+  epochs: 50
+  batch_size: 32
+  validation_split: 0.1
+  units_layer1: 50
+  units_layer2: 25
+  dropout_rate: 0.2
+  learning_rate: 0.001
+  patience: 10  # for early stopping
+
+# Model Evaluation
+evaluation:
+  metrics: ['MAE', 'RMSE', 'MAPE']
+  confidence_level: 0.95
