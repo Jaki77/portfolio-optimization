@@ -30,7 +30,7 @@ portfolio-optimization/
 ### **Installation**
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/portfolio-optimization.git
+git clone https://github.com/Jaki77/portfolio-optimization.git
 cd portfolio-optimization
 ```
 2. Create and activate virtual environment
@@ -66,7 +66,7 @@ pip install -r requirements.txt
 **Business Insights:** Identified opportunities and risks
 
 ### **Task 4: Portfolio Optimization**
-**Methodology:**Modern Portfolio Theory (MPT)
+**Methodology:** Modern Portfolio Theory (MPT)
 **Tools:** PyPortfolioOpt, Efficient Frontier
 **Output:** Optimal portfolio weights (TSLA, BND, SPY)
 **Key Portfolios:** Maximum Sharpe, Minimum Volatility
@@ -77,7 +77,7 @@ pip install -r requirements.txt
 **Validation:** Historical performance simulation
 
 ## Technical Stack
-| Tool | Purpose |
+| Component | Technology |
 |------|---------|
 | **Data Collection** | yfinance API |
 | **Data Processing** | pandas, numpy |
