@@ -1,0 +1,24 @@
+# Core Requirements
+numpy==1.24.0
+pandas==1.5.0
+yfinance==0.2.0
+matplotlib==3.7.0
+seaborn==0.12.0
+
+# Time Series
+statsmodels==0.14.0
+pmdarima==2.0.3
+
+# Machine Learning
+scikit-learn==1.2.0
+tensorflow==2.12.0
+
+# Portfolio Optimization
+PyPortfolioOpt==1.5.5
+
+# Utilities & File Handling
+jupyter>=1.0.0
+ipykernel>=6.0.0
+ipython>=8.0.0
+notebook>=6.4.0
+tqdm>=4.62.0
