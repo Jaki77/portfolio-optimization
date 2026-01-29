@@ -1,0 +1,53 @@
+# Backtesting Configuration for Task 5
+
+# Backtesting Period
+backtest:
+  start_date: '2025-01-01'
+  end_date: '2026-01-15'
+  initial_capital: 100000  # $100,000 initial investment
+  transaction_cost: 0.001  # 0.1% per transaction
+  slippage: 0.0005         # 0.05% slippage
+
+# Benchmark Portfolio
+benchmark:
+  weights:
+    SPY: 0.60
+    BND: 0.40
+  name: "60/40 Balanced Portfolio"
+  description: "Traditional 60% equities / 40% bonds portfolio"
+
+# Strategy Options
+strategy:
+  rebalancing_frequency: "monthly"  # "daily", "weekly", "monthly", "quarterly", "none"
+  rebalancing_threshold: 0.05       # 5% deviation triggers rebalancing
+  cash_management: "reinvest"       # "reinvest" or "keep_cash"
+  allow_shorting: false
+  allow_leverage: false
+
+# Performance Metrics
+metrics:
+  risk_free_rate: 0.02              # 2% annual risk-free rate
+  metrics_to_calculate:
+    - "total_return"
+    - "annualized_return"
+    - "annualized_volatility"
+    - "sharpe_ratio"
+    - "sortino_ratio"
+    - "max_drawdown"
+    - "calmar_ratio"
+    - "value_at_risk_95"
+    - "beta"
+    - "alpha"
+    - "information_ratio"
+    - "win_rate"
+    - "profit_factor"
+
+# Visualization
+visualization:
+  figure_size: [16, 10]
+  colors:
+    strategy: "#2E86AB"
+    benchmark: "#A23B72"
+    drawdown: "#F18F01"
+    rolling_sharpe: "#C73E1D"
+  rolling_window: 60  # 60-day rolling windows for metrics
