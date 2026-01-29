@@ -1,7 +1,7 @@
 # Core Requirements
 numpy
 pandas
-yfinanc
+yfinance
 matplotlib
 seaborn
 

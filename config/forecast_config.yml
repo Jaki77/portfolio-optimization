@@ -1,0 +1,31 @@
+# Forecasting Configuration for Task 3
+
+# Forecast Horizon
+forecast:
+  horizon_months: 12                    # 12-month forecast horizon
+  confidence_level: 0.95                # 95% confidence intervals
+  bootstrap_samples: 1000               # For non-parametric confidence intervals
+  uncertainty_method: "parametric"      # "parametric" or "bootstrap"
+
+# Visualization Parameters
+visualization:
+  forecast_color: "#2E86AB"
+  historical_color: "#333333"
+  confidence_alpha: 0.2
+  line_width: 2.0
+  grid_alpha: 0.3
+  figure_size: [16, 9]
+
+# Trend Analysis
+trend_analysis:
+  trend_window: 30                      # Days for trend calculation
+  momentum_periods: [5, 20, 60]         # Short, medium, long-term momentum
+  breakpoint_detection: true            # Detect structural breaks
+  seasonality_test: false               # Test for seasonal patterns
+
+# Risk Assessment
+risk_assessment:
+  volatility_window: 30
+  var_confidence: 0.95
+  stress_scenarios: ["normal", "crisis", "growth"]
+  scenario_probabilities: [0.7, 0.15, 0.15]
