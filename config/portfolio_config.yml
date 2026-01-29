@@ -1,0 +1,49 @@
+# Portfolio Optimization Configuration
+
+# Assets
+assets:
+  tickers: ["TSLA", "BND", "SPY"]
+  descriptions:
+    TSLA: "Tesla Inc. - High-growth technology stock"
+    BND: "Vanguard Total Bond Market ETF - U.S. investment-grade bonds"
+    SPY: "SPDR S&P 500 ETF - Broad market index"
+  risk_profiles:
+    TSLA: "high"
+    BND: "low" 
+    SPY: "moderate"
+
+# Optimization Parameters
+optimization:
+  risk_free_rate: 0.02  # 2% annual risk-free rate
+  n_portfolios: 10000   # Number of random portfolios to simulate
+  target_returns: [0.08, 0.12, 0.16, 0.20]  # Target annual returns for optimization
+  constraints:
+    min_weight: 0.0     # Minimum weight per asset (0 = no short selling)
+    max_weight: 1.0     # Maximum weight per asset
+    sum_weights: 1.0    # Sum of weights must equal 1
+
+# Efficient Frontier
+efficient_frontier:
+  n_points: 50          # Number of points on efficient frontier
+  return_range: [0.05, 0.25]  # Minimum and maximum target returns
+  risk_range: [0.05, 0.35]    # Minimum and maximum target risks
+
+# Key Portfolios to Identify
+key_portfolios:
+  max_sharpe: true      # Maximum Sharpe Ratio (Tangency) Portfolio
+  min_volatility: true  # Minimum Volatility Portfolio
+  max_return: true      # Maximum Return Portfolio (within constraints)
+  equal_weight: true    # Equal-weight portfolio for comparison
+
+# Visualization
+visualization:
+  figure_size: [14, 10]
+  colors:
+    efficient_frontier: "#1f77b4"
+    random_portfolios: "lightgray"
+    max_sharpe: "green"
+    min_volatility: "red"
+    max_return: "orange"
+    equal_weight: "purple"
+  alpha: 0.6
+  marker_size: 50
