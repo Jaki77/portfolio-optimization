@@ -12,3 +12,11 @@ plots/
 .ipynb_checkpoints/
 # OS files
 .DS_Store
+# Report files
+reports/
+*.pdf
+# Models
+models/
+*.pkl
+*.h5
+*.json
